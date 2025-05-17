@@ -37,7 +37,7 @@ The following images show the tumor detection results using YOLOv8n.
 
 | YOLOv8n Detection 1 | YOLOv8n Detection 2 | YOLOv8n Detection 3 | YOLOv8n Detection 4 |
 |---------------------|---------------------|---------------------|---------------------|
-| ![](images/Picture1.png) | ![](images/Picture2.png) | ![](images/Picture3.png) | ![](images/Picture4.png) |
+| ![](images/Picture1.jpg) | ![](images/Picture2.jpg) | ![](images/Picture3.jpg) | ![](images/Picture4.jpg) |
 
 ---
 
