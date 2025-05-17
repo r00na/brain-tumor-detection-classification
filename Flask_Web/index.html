@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html >
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.9.13, a.mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="https://r.mobirisesite.com/420003/assets/images/photo-1581595219618-375a1a48d-h_lw66eazz.jpg" type="image/x-icon">
+  <meta name="description" content="DBV team aims to revolutionize disease understanding through advanced MRI scan analysis using YOLO version 8 and ResNet.">
+  <title>DBV</title>
+  <link rel="stylesheet" href="https://r.mobirisesite.com/420003/assets/web/assets/mobirise-icons2/mobirise2.css?rnd=1715678428553">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/420003/assets/bootstrap/css/bootstrap.min.css?rnd=1715678428554">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/420003/assets/bootstrap/css/bootstrap-grid.min.css?rnd=1715678428554">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/420003/assets/bootstrap/css/bootstrap-reboot.min.css?rnd=1715678428554">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/420003/assets/parallax/jarallax.css?rnd=1715678428554">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/420003/assets/dropdown/css/style.css?rnd=1715678428554">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/420003/assets/socicon/css/styles.css?rnd=1715678428554">
+  <link rel="stylesheet" href="https://r.mobirisesite.com/420003/assets/theme/css/style.css?rnd=1715678428554">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;700&display=swap&display=swap"></noscript>
+  <link rel="stylesheet" href="https://r.mobirisesite.com/420003/assets/css/mbr-additional.css?rnd=1715678428554" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+  <section data-bs-version="5.1" class="menu menu2 cid-ubBOMyCSS4" once="menu" id="menu-5-ubBOMyCSS4">
+	
+
+	<nav class="navbar navbar-dropdown navbar-expand-lg">
+		<div class="container">
+			<div class="navbar-brand">
+				
+				<span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4" >Deep Brain Vision</a></span>
+			</div>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item">
+						<a class="nav-link link text-white text-primary display-4" href="#about-us-2-ubBOMyEEQH">About</a>
+					</li><li class="nav-item">
+						<a class="nav-link link text-white text-primary display-4" href="#gallery03-9">Explore</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link link text-white text-primary display-4" href="#faq-3-ubBOMyFCrU" aria-expanded="false">FAQ</a>
+					</li><li class="nav-item">
+            
+            <a class="nav-link link text-white text-primary display-4" href="#metrics-1-ubBOMyFPwC">Metrics</a>
+          </li></ul>
+				
+				
+			</div>
+		</div>
+	</nav>
+</section>
+<section data-bs-version="5.1" class="header16 cid-ubBOMyE655 mbr-fullscreen mbr-parallax-background" id="hero-17-ubBOMyE655">
+  
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="content-wrap col-12 col-md-12">
+        <h1 class="mbr-section-title mbr-fonts-style mbr-white mb-4 display-1"><strong>DBV</strong></h1>
+        <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7">Join the Fight Against Brain Tumors by<br> Uploading Your MRI Scan&nbsp;</p>
+       
+
+<form class="form-signin" method=post enctype=multipart/form-data name="form1" style="display: flex; flex-direction: column; align-items: center;">
+    
+  <h1 class="h3 mb-3 font-weight-normal"> </h1>
+<input type="file" name="file" class="form-control-file" id="inputfile" style="background-color: transparent; color: white; border: 2px solid white; padding: 10px; margin-bottom: 10px;">
+  <br/>
+  <button class="btn btn-block btn-default btn-sm" style="background-color: transparent; color: white; border: 2px solid white; display: flex; justify-content: center; " type="submit">Show Result</button>
+ 
+</form>
+
+<!--here what i add-->
+
+</section>
+<!-- detected image display -->
+<section>
+  <img id="my-image"  src="{{ url_for('predict_img', filename=image_path) }}" style="height:640; width:640px; display: none;"/> 
+  
+  <script>
+  document.getElementById("my-image").onload = function() {
+    this.style.display = "block";
+  };
+</script>
+</section>
+<section data-bs-version="5.1" class="article2 cid-ubBOMyEEQH" id="about-us-2-ubBOMyEEQH">
+	
+
+	
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-12 col-md-12 col-lg-6 image-wrapper">
+				<img class="w-100" src="https://r.mobirisesite.com/420003/assets/images/photo-1666214280165-20e3d73d7-h_lvz4bn01.jpg" alt=" ">
+			</div>
+			<div class="col-12 col-md-12 col-lg">
+				<div class="text-wrapper align-left">
+					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+						<strong>Our Mission</strong>
+					</h1>
+					<p class="mbr-text align-left mbr-fonts-style mb-3 display-7">Welcome to DBV, where we revolutionize healthcare by using cutting-edge AI technology to analyze MRI scans and detect brain tumors.</p>
+
+					<p class="mbr-text align-left mbr-fonts-style mb-3 display-7">Our team, Deep Brain Vision, is dedicated to empowering patients by providing accurate tumor classification, including glioma, pituitary,&nbsp; meningioma, and no Tumor.</p>
+
+					<p class="mbr-text align-left mbr-fonts-style mb-3 display-7">Upload your MRI scan today and let our advanced models pinpoint the exact location and type of tumor, giving you the knowledge to take control of your health.</p>
+
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section data-bs-version="5.1" class="gallery3 cid-ucdeqoItcN" id="gallery03-9">
+    
+    
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 content-head">
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img">
+              <img src="https://r.mobirisesite.com/420003/assets/images/shop1-h_lvz2rpia.jpg"  data-slide-to="0" data-bs-slide-to="0">
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mt-3 mb-3 display-7"><strong>&nbsp;Glioma Tumour</strong></h5>
+              <h6 class="item-subtitle mbr-fonts-style mb-3 display-4">a growth of cells that starts in the brain or spinal cord.
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img">
+              <img src="https://r.mobirisesite.com/420003/assets/images/shop2-h_lvy80uw4.jpg"  data-slide-to="1" data-bs-slide-to="1">
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mt-3 mb-3 display-7"><strong>Meningioma Tumour</strong></h5>
+              <h6 class="item-subtitle mbr-fonts-style mb-3 display-4">tumors that develop from the membrane (meninges) that covers the brain and spinal cord.
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img">
+              <img src="https://r.mobirisesite.com/420003/assets/images/shop3-h_lvy7s51h.jpg"  data-slide-to="2" data-bs-slide-to="2">
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mt-3 mb-3 display-7"><strong>Pituitary Tumour</strong></h5>
+              <h6 class="item-subtitle mbr-fonts-style mb-3 display-4">a pituitary
+<div>gland growth that can have various hormonal effects on the body</div></h6>
+              
+            </div>
+          </div>
+        </div>
+        <div class="item features-image col-12 col-md-6 col-lg-3">
+          <div class="item-wrapper">
+            <div class="item-img">
+              <img src="https://r.mobirisesite.com/420003/assets/images/shop4-h_lvy82ubk.jpg"  data-slide-to="3" data-bs-slide-to="3">
+            </div>
+            <div class="item-content align-left">
+              <h5 class="item-title mbr-fonts-style mt-3 mb-3 display-7"><strong>No Tumour</strong></h5>
+              <h6 class="item-subtitle mbr-fonts-style mb-3 display-4">a healthy brain scan without any
+<div>detectable tumours.&nbsp;</div></h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section data-bs-version="5.1" class="list05 cid-ubBOMyFCrU" id="faq-3-ubBOMyFCrU">
+    
+    <div class="container">
+        <div class="col-12 mb-5 content-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>Frequently Asked Questions</strong>
+            </h3>
+            
+        </div>
+        <div class="row justify-content-center ">
+            <div class="col-12 col-lg-8">
+                <div class="item features-without-image col-12 active">
+                    <div class="item-wrapper">
+                        <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
+                            <strong>How does DBV detect brain tumors?</strong></h5>
+                        <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">DBV utilizes YOLO v8 and ResNet models to analyze MRI scans and classify tumors with precision.</p>
+                    </div>
+                </div>
+                <div class="item features-without-image col-12">
+                    <div class="item-wrapper">
+                        <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
+                            <strong>What types of tumors can DBV detect?</strong></h5>
+                        <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">DBV can detect glioma, pituitary, meningioma, and identify cases with no tumor present.</p>
+                    </div>
+                </div>
+                <div class="item features-without-image col-12">
+                    <div class="item-wrapper">
+                        <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
+                            <strong>Is uploading an MRI scan safe?</strong></h5>
+                        <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">Absolutely! Your privacy and data security are our top priorities. We ensure a secure and confidential process for all uploads.</p>
+                    </div>
+                </div>
+                <div class="item features-without-image col-12">
+                  <div class="item-wrapper">
+                      <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
+                          <strong>How accurate is DBV's tumor classification?</strong></h5>
+                      <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">DBV's models have been trained rigorously to provide accurate and reliable tumor classification results.</p>
+                  </div>
+              </div>
+              <div class="item features-without-image col-12">
+                <div class="item-wrapper">
+                    <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5">
+                        <strong>Can DBV provide treatment recommendations?</strong></h5>
+                    <p class="mbr-text mbr-fonts-style mt-0 mb-3 display-7">While DBV focuses on tumor detection, we recommend consulting with healthcare professionals for treatment options based on the results.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="features023 cid-ubBOMyFPwC" id="metrics-1-ubBOMyFPwC">
+
+    
+
+    
+    
+    <div class="container">
+        
+        <div class="row content-row justify-content-center">
+            <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+                <div class="item-wrapper">
+                    <div class="title mb-2 mb-md-3">
+                        <span class="num mbr-fonts-style display-1">
+                            <strong>98%</strong></span>
+                    </div>
+                    <h4 class="card-title mbr-fonts-style display-5">
+                        <strong>Tumor Detection Accuracy</strong>
+                    </h4>
+                    
+                </div>
+            </div>
+            <div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+                <div class="item-wrapper">
+                    <div class="title mb-2 mb-md-3">
+                        <span class="num mbr-fonts-style display-1">
+                            <strong>24/7</strong></span>
+                    </div>
+                    <h4 class="card-title mbr-fonts-style display-5">
+                        <strong>Support Availability</strong>
+                    </h4>
+                    
+                </div>
+            </div><div class="item features-without-image col-12 col-md-6 col-lg-4 item-mb">
+                <div class="item-wrapper">
+                    <div class="title mb-2 mb-md-3">
+                        <span class="num mbr-fonts-style display-1"><strong>Fast</strong></span>
+                    </div>
+                    <h4 class="card-title mbr-fonts-style display-5"><strong>Results Delivery</strong></h4>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="article07 cid-ubBOMyH857" id="generic-text-16-ubBOMyH857">
+  
+
+  
+  
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="card col-md-12 col-lg-8">
+        <div class="card-wrapper">
+          <h3 class="card-title mbr-fonts-style mbr-white mt-3 mb-4 display-2"><strong>&nbsp;DBV Team</strong>
+          </h3>
+          <div class="row card-box align-left">
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                
+                <p class="mbr-text mbr-fonts-style display-7">Thank you for visiting the Deep Brain Vision (DBV) Team! led by the visionary Rehab Alsaidi and comprised of talented team members Rana Alraggad, Ghevonet Mouradian, and Sara Alkhalili. We have transformed an idea into reality together and extend my deepest appreciation to each member of
+<br>the team.</p>
+              </div>
+            </div>
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                
+                <p class="mbr-text mbr-fonts-style display-7">By utilizing state-of-the-art YOLO v8 and ResNet models, we provide patients with instant and accurate tumor classification and detection in MRI scans. Say goodbye to uncertainty and hello to precise diagnosis!</p>
+              </div>
+            </div>
+            <div class="item features-without-image col-12">
+              <div class="item-wrapper">
+                
+                <p class="mbr-text mbr-fonts-style display-7">Whether you're facing glioma, pituitary, meningioma, or no tumor, our state-of-the-art AI-driven diagnostic tool  will guide you through your MRI results with clarity and speed. Take the first step towards empowerment and knowledge today!</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="footer3 cid-ubBOMyIzOB" once="footers" id="footer-6-ubBOMyIzOB">
+
+        
+
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="row-links">
+                <ul class="header-menu">
+                  
+                  
+                  
+                  
+                <li class="header-menu-item mbr-fonts-style display-5 note-air-editor note-editable">
+                     &nbsp;<a href="#about-us-2-ubBOMyEEQH" class="text-white text-primary">About</a>
+                  </li><li class="header-menu-item mbr-fonts-style display-5">
+                    <a href="#" class="text-white">Services</a>
+                  </li><li class="header-menu-item mbr-fonts-style display-5">
+                    <a href="#generic-text-16-ubBOMyH857" class="text-white">Blog</a>
+                  </li><li class="header-menu-item mbr-fonts-style display-5">
+                    <a href="mailto:deepbrainvisionteam@gmail.com" class="text-white">Contact</a>
+                  <!--</li><li class="header-menu-item mbr-fonts-style display-5"> &nbsp; &nbsp;</li></ul>-->
+              </div>
+
+            
+            <div class="col-12 mt-4">
+                <p class="mbr-fonts-style copyright display-7">© 2024 DBV Team. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/parallax/jarallax.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/ytplayer/index.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  
+</body>
+</html>
